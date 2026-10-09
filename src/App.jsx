@@ -20,7 +20,7 @@ const App = () => {
       id:Date.now()
     }
     setData([...data,newUser])
-    e.reset()
+    e.target.reset()
   }
 
   return (
@@ -40,6 +40,7 @@ const App = () => {
           <h1>{e.name}</h1>
           <p>{e.age}</p>
           <button onClick={()=>handleDelete(e.id)}>Delete</button>
+          <button onClick={()=>handleEdit()}>Edit</button>
         </div>
       })
 
